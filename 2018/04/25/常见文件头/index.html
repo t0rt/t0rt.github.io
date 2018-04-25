@@ -79,21 +79,17 @@
 
 
 
-<meta name="description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
+<meta name="description" content="各类文件的文件头标志">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Zip爆破">
-<meta property="og:url" content="http://yoursite.com/2018/04/25/Zip爆破/index.html">
+<meta property="og:title" content="常见文件头">
+<meta property="og:url" content="http://yoursite.com/2018/04/25/常见文件头/index.html">
 <meta property="og:site_name" content="T0rt&#39;s Blog">
-<meta property="og:description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
+<meta property="og:description" content="各类文件的文件头标志">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fl1nvu5ykzj30lk0lkaqa.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fl1nwwhh8aj30yf0mnguq.jpg">
-<meta property="og:updated_time" content="2018-04-25T10:31:21.743Z">
+<meta property="og:updated_time" content="2018-04-25T10:35:23.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zip爆破">
-<meta name="twitter:description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg">
+<meta name="twitter:title" content="常见文件头">
+<meta name="twitter:description" content="各类文件的文件头标志">
 
 
 
@@ -123,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/25/Zip爆破/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/25/常见文件头/"/>
 
 
 
 
 
-  <title>Zip爆破 | T0rt's Blog</title>
+  <title>常见文件头 | T0rt's Blog</title>
   
 
 
@@ -236,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/Zip爆破/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/常见文件头/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="T0rt">
@@ -253,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Zip爆破</h1>
+          <h1 class="post-title" itemprop="name headline">常见文件头</h1>
         
 
         <div class="post-meta">
@@ -265,7 +261,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-25T18:21:02+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-25T18:34:47+08:00">
                 2018-04-25
               </time>
             
@@ -303,19 +299,8 @@
       
 
       
-        <h1 id="爆破-字典-掩码攻击"><a href="#爆破-字典-掩码攻击" class="headerlink" title="爆破/字典/掩码攻击"></a>爆破/字典/掩码攻击</h1><h2 id="0x00-介绍"><a href="#0x00-介绍" class="headerlink" title="0x00 介绍"></a>0x00 介绍</h2><hr>
-<ul>
-<li>爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码</li>
-<li>字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上</li>
-<li>掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少<a id="more"></a>
-</li>
-</ul>
-<h2 id="0x01-工具介绍"><a href="#0x01-工具介绍" class="headerlink" title="0x01 工具介绍"></a>0x01 工具介绍</h2><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zip:ziperello、Advanced ZIP Password Recovery(azpr)</span><br><span class="line">rar:AdvacedRARRepair(arpr)、Advanced Archive Password Recovery(archpr)</span><br></pre></td></tr></table></figure>
-<p>azpr<br>爆破<br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg" alt=""><br>点击开始进行爆破</p>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>可以从网上下载字典，也可以自己构造<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fl1nvu5ykzj30lk0lkaqa.jpg" alt=""></p>
-<h2 id="掩码攻击"><a href="#掩码攻击" class="headerlink" title="掩码攻击"></a>掩码攻击</h2><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fl1nwwhh8aj30yf0mnguq.jpg" alt=""></p>
-
+        <h2 id="各类文件的文件头标志"><a href="#各类文件的文件头标志" class="headerlink" title="各类文件的文件头标志"></a>各类文件的文件头标志</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">JPEG (jpg)，文件头：FFD8FF</span><br><span class="line">PNG (png)，文件头：89504E47</span><br><span class="line">GIF (gif)，文件头：47494638</span><br><span class="line">TIFF (tif)，文件头：49492A00</span><br><span class="line">Windows Bitmap (bmp)，文件头：424D</span><br><span class="line">CAD (dwg)，文件头：41433130</span><br><span class="line">Adobe Photoshop (psd)，文件头：38425053</span><br><span class="line">Rich Text Format (rtf)，文件头：7B5C727466</span><br><span class="line">XML (xml)，文件头：3C3F786D6C</span><br><span class="line">HTML (html)，文件头：68746D6C3E</span><br><span class="line">Email [thorough only] (eml)，文件头：44656C69766572792D646174653A</span><br><span class="line">Outlook Express (dbx)，文件头：CFAD12FEC5FD746F</span><br><span class="line">Outlook (pst)，文件头：2142444E</span><br><span class="line">MS Word/Excel (xls.or.doc)，文件头：D0CF11E0</span><br><span class="line">MS Access (mdb)，文件头：5374616E64617264204A</span><br><span class="line">WordPerfect (wpd)，文件头：FF575043</span><br><span class="line">Postscript (eps.or.ps)，文件头：252150532D41646F6265</span><br><span class="line">Adobe Acrobat (pdf)，文件头：255044462D312E</span><br><span class="line">Quicken (qdf)，文件头：AC9EBD8F</span><br><span class="line">Windows Password (pwl)，文件头：E3828596</span><br><span class="line">ZIP Archive (zip)，文件头：504B0304</span><br><span class="line">RAR Archive (rar)，文件头：52617221</span><br><span class="line">Wave (wav)，文件头：57415645</span><br><span class="line">AVI (avi)，文件头：41564920</span><br><span class="line">Real Audio (ram)，文件头：2E7261FD</span><br><span class="line">Real Media (rm)，文件头：2E524D46</span><br><span class="line">MPEG (mpg)，文件头：000001BA</span><br><span class="line">MPEG (mpg)，文件头：000001B3</span><br><span class="line">Quicktime (mov)，文件头：6D6F6F76</span><br><span class="line">Windows Media (asf)，文件头：3026B2758E66CF11</span><br><span class="line">MIDI (mid)，文件头：4D546864</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -339,15 +324,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/04/25/盲水印攻击/" rel="next" title="盲水印攻击">
+                <i class="fa fa-chevron-left"></i> 盲水印攻击
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/25/盲水印攻击/" rel="prev" title="盲水印攻击">
-                盲水印攻击 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,7 +446,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#爆破-字典-掩码攻击"><span class="nav-number">1.</span> <span class="nav-text">爆破/字典/掩码攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-介绍"><span class="nav-number">1.1.</span> <span class="nav-text">0x00 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-工具介绍"><span class="nav-number">1.2.</span> <span class="nav-text">0x01 工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典"><span class="nav-number">1.3.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#掩码攻击"><span class="nav-number">1.4.</span> <span class="nav-text">掩码攻击</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#各类文件的文件头标志"><span class="nav-number">1.</span> <span class="nav-text">各类文件的文件头标志</span></a></li></ol></div>
             
 
           </div>
