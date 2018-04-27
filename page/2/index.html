@@ -79,21 +79,13 @@
 
 
 
-<meta name="description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Zip爆破">
-<meta property="og:url" content="http://yoursite.com/2018/04/25/Zip爆破/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="T0rt&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="T0rt&#39;s Blog">
-<meta property="og:description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79ly1fl1nvu5ykzj30lk0lkaqa.jpg">
-<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fl1nwwhh8aj30yf0mnguq.jpg">
-<meta property="og:updated_time" content="2018-04-26T03:46:15.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zip爆破">
-<meta name="twitter:description" content="爆破/字典/掩码攻击0x00 介绍  爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码 字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上 掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少">
-<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg">
+<meta name="twitter:title" content="T0rt&#39;s Blog">
 
 
 
@@ -123,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/25/Zip爆破/"/>
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
 
 
 
 
 
-  <title>Zip爆破 | T0rt's Blog</title>
+  <title>T0rt's Blog</title>
   
 
 
@@ -148,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -251,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -283,7 +276,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Zip爆破</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/25/Zip爆破/" itemprop="url">Zip爆破</a></h1>
         
 
         <div class="post-meta">
@@ -355,19 +350,20 @@
       
 
       
-        <h1 id="爆破-字典-掩码攻击"><a href="#爆破-字典-掩码攻击" class="headerlink" title="爆破/字典/掩码攻击"></a>爆破/字典/掩码攻击</h1><h2 id="0x00-介绍"><a href="#0x00-介绍" class="headerlink" title="0x00 介绍"></a>0x00 介绍</h2><hr>
+        
+          <h1 id="爆破-字典-掩码攻击"><a href="#爆破-字典-掩码攻击" class="headerlink" title="爆破/字典/掩码攻击"></a>爆破/字典/掩码攻击</h1><h2 id="0x00-介绍"><a href="#0x00-介绍" class="headerlink" title="0x00 介绍"></a>0x00 介绍</h2><hr>
 <ul>
 <li>爆破:顾名思义，逐个尝试选定集合中可以组成的所有密码，直到遇到正确密码</li>
 <li>字典:字典攻击的效率比爆破稍高，因为字典中存储了常用的密码，因此就避免把爆破时把时间浪费在脸滚键盘类的密码上</li>
-<li>掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少<a id="more"></a>
-</li>
-</ul>
-<h2 id="0x01-工具介绍"><a href="#0x01-工具介绍" class="headerlink" title="0x01 工具介绍"></a>0x01 工具介绍</h2><hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">zip:ziperello、Advanced ZIP Password Recovery(azpr)</span><br><span class="line">rar:AdvacedRARRepair(arpr)、Advanced Archive Password Recovery(archpr)</span><br></pre></td></tr></table></figure>
-<p>azpr<br>爆破<br><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fl1nmjph0dj30lg0lgwvv.jpg" alt=""><br>点击开始进行爆破</p>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>可以从网上下载字典，也可以自己构造<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fl1nvu5ykzj30lk0lkaqa.jpg" alt=""></p>
-<h2 id="掩码攻击"><a href="#掩码攻击" class="headerlink" title="掩码攻击"></a>掩码攻击</h2><p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fl1nwwhh8aj30yf0mnguq.jpg" alt=""></p>
-
+<li>掩码攻击:如果已知密码的某几位，如已知6位密码的第3位是a，那么可以构造??a???进行掩码攻击，掩码攻击的原理相当于构造了第3位为a的字典，因此掩码攻击的效率也比爆破高出不少
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/04/25/Zip爆破/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
@@ -384,28 +380,12 @@
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/25/盲水印攻击/" rel="prev" title="盲水印攻击">
-                盲水印攻击 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -415,11 +395,14 @@
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -427,10 +410,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -451,17 +430,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -512,22 +482,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#爆破-字典-掩码攻击"><span class="nav-number">1.</span> <span class="nav-text">爆破/字典/掩码攻击</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x00-介绍"><span class="nav-number">1.1.</span> <span class="nav-text">0x00 介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-工具介绍"><span class="nav-number">1.2.</span> <span class="nav-text">0x01 工具介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字典"><span class="nav-number">1.3.</span> <span class="nav-text">字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#掩码攻击"><span class="nav-number">1.4.</span> <span class="nav-text">掩码攻击</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -658,10 +612,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
